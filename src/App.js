@@ -2,6 +2,16 @@ import React, { useState, useEffect } from 'react';
 import Character from './components/Character';
 import './App.css';
 import axios from 'axios';
+import styled from 'styled-components';
+
+
+const MiddleStyle = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 5%;
+`;
+
 
 const App = () => {
 
@@ -27,21 +37,17 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
+      <MiddleStyle className='Middle'>
       {characters.map((character, index) => {
           return <Character key={index} info={character} ></Character>
         })
       }
+      </MiddleStyle>
+      
     </div>
   );
   }
   
   export default App;
 
-//[GET] https://swapi.dev/api/people use to obtain characters
-
-//set list of characters to state useState(...)
-
-//name
-//birth_year
-//
 
