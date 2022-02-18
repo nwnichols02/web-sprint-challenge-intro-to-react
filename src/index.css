@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 8px;
+  padding: 8px;
   font-family: sans-serif;
   background-image: url('./images/sw-bg.jpg');
   background-size: cover;

@@ -3,7 +3,6 @@ import Character from './components/Character';
 import './App.css';
 import axios from 'axios';
 
-
 const App = () => {
 
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -14,7 +13,6 @@ const App = () => {
   useEffect(() => {
       axios.get('https://swapi.dev/api/people')
         .then(res => {
-          console.log(res.data)
           setCharacters(res.data);
         })
         .catch(err => {
